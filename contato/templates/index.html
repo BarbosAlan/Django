@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contato | Whitepace</title>
+</head>
+
+<body>
+    <header style="background-image: url('img/background-contacto.jpg');">
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="servicos.html">Servicos</a>
+                    <a href="contacto.html" class="btn">Contato</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <i class="fa fa-times-circle"></i>
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>Serviços</h1>
+                </div>
+            </section>
+        </div>
+    </header>
+    
+    <main>
+        <section class="contacto">
+            <div class="container">
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.263322282285!2d-43.45324822400391!3d-22.755607079361862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9967a99225f96f%3A0xec20bfc8ff090b46!2sSenac%20Nova%20Igua%C3%A7u!5e0!3m2!1spt-BR!2sbr!4v1741735188922!5m2!1spt-BR!2sbr" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contacto-info">
+                    <div class="left-side">
+                        <div>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <p>R. Cel. Carlos Matos, 86 - Centro, Nova Iguaçu - RJ, 26210-200</p>
+                        </div>
+                        <div>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <p>whitepace@gmail.com</p>
+                        </div>
+                        <div>
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <p>+55(21) 9 9999-9999</p>
+                        </div>
+                        <div>
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <p>+55(21) 9 8888-8888</p>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <form action="">
+                            <input type="text" placeholder="Nome" required>
+                            <input type="email" placeholder="E-mail" required>
+                            <input type="text" placeholder="Assunto" required>
+                            <textarea cols="30" rows="10" placeholder="Sua Mensagem" required></textarea>
+                            <button class="btn">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="links">
+                <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Dpt_BR"> <i class="fa fa-facebook"></i> </a>
+                <a href="https://www.instagram.com/"> <i class="fa fa-instagram"></i> </a>
+                <a href="https://github.com/"> <i class="fa fa-github"></i> </a>
+                <a href="https://www.linkedin.com/feed/?trk=sem-ga_campid.12619604099_asid.149519181115_crid.725790844702_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9199135"> <i class="fa fa-linkedin"></i> </a>
+            </div>
+            <p>Desnvolvido po Alan Guimarães</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
