@@ -1,36 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "global/base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
-    <title>Serviços | Whitepace</title>
-</head>
+{% block main %}
 
-<body>
-    <header style="background-image: url('img/background-servicos.jpg');">
-        <div class="container">
-            <nav>
-                <a href="index.html">
-                    <img src="img/logo.png" alt="Logo">
-                </a>
-                <ul class="ul">
-                    <a href="index.html">Home</a>
-                    <a href="sobre.html">Sobre</a>
-                    <a href="servicos.html">Servicos</a>
-                    <a href="contacto.html" class="btn">Contato</a>
-                    <div class="close-icon" onclick="closeMenu()">
-                        <i class="fa fa-times-circle"></i>
-                    </div>
-                </ul>
-                <div class="menu-icon" onclick="openMenu()">
-                    <i class="fa fa-bars"></i>
-                </div>
-            </nav>
             <section class="banner">
                 <div class="banner-text">
                     <h1>Serviços</h1>
@@ -133,18 +104,6 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="links">
-                <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Dpt_BR"> <i class="fa fa-facebook"></i> </a>
-                <a href="https://www.instagram.com/"> <i class="fa fa-instagram"></i> </a>
-                <a href="https://github.com/"> <i class="fa fa-github"></i> </a>
-                <a href="https://www.linkedin.com/feed/?trk=sem-ga_campid.12619604099_asid.149519181115_crid.725790844702_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9199135"> <i class="fa fa-linkedin"></i> </a>
-            </div>
-            <p>Desnvolvido po Alan Guimarães</p>
-        </div>
-    </footer>
+    
     <script src="js/main.js"></script>
-</body>
-
-</html>
+    {% endblock main %}
