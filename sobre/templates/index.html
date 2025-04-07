@@ -2,6 +2,8 @@
 
 {% block main %}
 
+{% load static %}
+
             <section class="banner">
                 <div class="banner-text">
                     <h1>Sobre</h1>
@@ -28,7 +30,7 @@
                         <a href="cotacto.html" class="btn animate-btn">Entrar em contato</a>
                     </div>
                     <div class="sobre-img">
-                        <img src="img/sobre.jpg" alt="Sobre">
+                        <img src="{% static '/global/img/sobre.jpg' %}" alt="Sobre">
                     </div>
                 </div>
             </section>

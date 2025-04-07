@@ -1,7 +1,9 @@
 {% extends "global/base.html" %}
 
 {% block main %}
-    
+
+{% load static %}
+
                 <div class="banner-text">
                     <h1>Whitepace</h1>
                     <p>Construa a sua marca, cosquite o mundo sem a habilidades de códigos ou designer necessários</p>
@@ -20,15 +22,15 @@
                         nunca foi tão fácil.</p>
                     <a href="contacto.html" class="btn animate-btn">Entrar em contato</a>
                 </div>
-                <div class="faca-mais-img">
-                    <img src="{% static/img/img-1.png %}" alt="">
+                <div class="{% static '/global/faca-mais-img' %}">
+                    <img src="{% static '/global/img/img-1.png' %}" alt="">
                 </div>
             </div>
         </section>
         <section class="faca-mais">
             <div class="container">
-                <div class="faca-mais-img">
-                    <img src="img/img-2.png" alt="">
+                <div class="{% static '/global/faca-mais-img' %}">
+                    <img src="{% static 'img/img-2.png' %}" alt="">
                 </div>
                 <div class="faca-mais-text">
                     <h3>Ter um website nunca foi tão fácil</h3>
@@ -45,7 +47,7 @@
                 <p>Leia o que nossos clientes falam de nós pra o mundo</p>
                 <div class="cards">
                     <div class="card-item">
-                        <img src="img/ana-souza.png" alt="">
+                        <img src="{% static '/global/img/ana-souza.png' %}" alt="">
                         <p class="nome-user">Ana Souza - Pequena Empresária</p>
                         <p class="depoimento-user">A Whitepace transformou minha loja online em algo profissional e atrativo! O site ficou rápido, moderno e fácil de navegar. O suporte foi incrível do início ao fim. Recomendo para qualquer empreendedor!</p>
                         <div class="estrelas">
@@ -57,7 +59,7 @@
                         </div>
                     </div>
                     <div class="card-item">
-                        <img src="img/carlos.png" alt="">
+                        <img src="{% static '/global/img/carlos.png' %}" alt="">
                         <p class="nome-user">Carlos Mendes - CEO de Empresa de Médio Porte</p>
                         <p class="depoimento-user">Precisávamos de um site funcional e bem estruturado para nossa empresa, e a Whitepace superou nossas expectativas! O design ficou impecável, e a otimização para SEO já trouxe mais visibilidade. Trabalho de excelência!</p>
                         <div class="estrelas">
@@ -69,7 +71,7 @@
                         </div>
                     </div>
                     <div class="card-item">
-                        <img src="img/raquel-rocha.png" alt="">
+                        <img src="{% static '/global/img/raquel-rocha.png' %}" alt="">
                         <p class="nome-user">Raquel Rocha - Profissional Autônoma</p>
                         <p class="depoimento-user">Queria uma landing page para divulgar meus serviços e a Whitepace criou algo incrível! Ficou exatamente como eu imaginei: bonito, responsivo e eficaz. Atendimento rápido e de qualidade. Muito obrigada!</p>
                         <div class="estrelas">
@@ -88,10 +90,10 @@
                 <h3>Nossos Clientes</h3>
                 <p>Prestamos serviços todo tipo de empresa ou projecto, olhe alguns dos nossos clientes</p>
                 <div>
-                    <img src="img/apple.png" alt="">
-                    <img src="img/microsoft.png" alt="">
-                    <img src="img/slack.png" alt="">
-                    <img src="img/google.png" alt="">
+                    <img src="{% static '/global/img/apple.png' %}" alt="">
+                    <img src="{% static '/global/img/microsoft.png' %}" alt="">
+                    <img src="{% static '/global/img/slack.png' %}" alt="">
+                    <img src="{% static '/global/img/google.png' %}" alt="">
                 </div>
             </div>
         </section>
@@ -103,8 +105,8 @@
                         backup e manutenção no seu site em tempo recorde.</p>
                     <a href="contacto.html" class="btn animate-btn">Entrar em contato</a>
                 </div>
-                <div class="faca-mais-img">
-                    <img src="img/security.png" alt="">
+                <div class="{% static '/global/faca-mais-img' %}">
+                    <img src="{% static '/global/img/security.png' %}" alt="">
                 </div>
             </div>
         </section>

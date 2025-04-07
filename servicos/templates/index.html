@@ -2,6 +2,8 @@
 
 {% block main %}
 
+{% load static %}
+
             <section class="banner">
                 <div class="banner-text">
                     <h1>Serviços</h1>
@@ -16,7 +18,7 @@
                 <p>Conheça os nossos melhores serviços que temos para você!</p>
                 <div class="rows-cards">
                     <div class="row-card-item">
-                        <img src="img/cloud.png" alt="">
+                        <img src="{% static '/global/img/cloud.png' %}" alt="">
                         <p class="nome-servicos"><strong>Serviços em nuvem</strong></p>
                         <p class="descricao-servicos">
                             Soluções seguras e escaláveis para armazenar, gerenciar e otimizar seus dados, garantindo
@@ -24,7 +26,7 @@
                             suas operações sempre ativas e protegidas. </p>
                     </div>
                     <div class="row-card-item">
-                        <img src="img/digital-marketing.png" alt="">
+                        <img src="{% static '/global/img/digital-marketing.png' %}" alt="">
                         <p class="nome-servicos"><strong>Marketing digital</strong></p>
                         <p class="descricao-servicos">
                             Estratégias inteligentes para fortalecer sua marca, atrair mais clientes e aumentar suas
@@ -33,7 +35,7 @@
                         </p>
                     </div>
                     <div class="row-card-item">
-                        <img src="img/seo.png" alt="">
+                        <img src="{% static '/global/img/seo.png' %}" alt="">
                         <p class="nome-servicos"><strong>Seo</strong></p>
                         <p class="descricao-servicos">
                             Técnicas avançadas para melhorar o posicionamento do seu site no Google, garantindo mais
@@ -42,7 +44,7 @@
                         </p>
                     </div>
                     <div class="row-card-item">
-                        <img src="img/virtual_store.png" alt="">
+                        <img src="{% static '/global/img/virtual_store.png' %}" alt="">
                         <p class="nome-servicos"><strong>Criação de lojas virtuas</strong></p>
                         <p class="descricao-servicos">
                             Desenvolvimento de e-commerces personalizados, responsivos e otimizados para vendas,
@@ -51,7 +53,7 @@
                         </p>
                     </div>
                     <div class="row-card-item">
-                        <img src="img/layer.png" alt="">
+                        <img src="{% static '/global/img/layer.png' %}" alt="">
                         <p class="nome-servicos"><strong>Identidade visual & design</strong></p>
                         <p class="descricao-servicos">
                             Construção de uma identidade visual forte e profissional, com logotipos, paletas de cores e
@@ -60,7 +62,7 @@
                         </p>
                     </div>
                     <div class="row-card-item">
-                        <img src="img/manager.png" alt="">
+                        <img src="{% static '/global/img/manager.png' %}" alt="">
                         <p class="nome-servicos"><strong>Criação de conteúdo</strong></p>
                         <p class="descricao-servicos">
                             Produção de textos, artigos, posts para redes sociais e materiais institucionais que engajam
@@ -74,28 +76,28 @@
         <section class="dados">
             <div class="container">
                 <div class="dados-item">
-                    <img src="img/cloud.png" alt="">
+                    <img src="{% static '/global/img/cloud.png' %}" alt="">
                     <p>
                         <strong>+360</strong> <br>
                         Projetos concluidos
                     </p>
                 </div>
                 <div class="dados-item">
-                    <img src="img/manager.png" alt="">
+                    <img src="{% static '/global/img/manager.png' %}" alt="">
                     <p>
                         <strong>+890</strong> <br>
                         Clientes satisfeitos
                     </p>
                 </div>
                 <div class="dados-item">
-                    <img src="img/trophy.png" alt="">
+                    <img src="{% static '/global/img/trophy.png' %}" alt="">
                     <p>
                         <strong>+4303</strong> <br>
                         Jornada de trabalho
                     </p>
                 </div>
                 <div class="dados-item">
-                    <img src="img/writer.png" alt="">
+                    <img src="{% static '/global/img/writer.png' %}" alt="">
                     <p>
                         <strong>+254</strong> <br>
                         Publicidade paga
