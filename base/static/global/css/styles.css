@@ -82,7 +82,7 @@ nav ul a:hover::after{
 }
 nav .menu-icon{
     cursor: pointer;
-    font-size: 5px;
+    font-size: 25px;
     color: #ffffff;
     display: none;
 }
@@ -140,6 +140,7 @@ nav .close-icon{
 .cards{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .depoimentos .card-item{
     background-color: #d3e6fd;
@@ -296,6 +297,65 @@ nav .close-icon{
 .dados .dados-item p strong{
     font-size: 28px;
 }
+.contacto-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.contacto-info .left-side{
+    width: 50%;
+    padding: 30px;
+    background-color: #4f9cf9;
+    border-radius: 14px;
+    margin-right: 50px;
+    height: fit-content;
+}
+.contacto-info .left-side div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.contacto-info .left-side div i{
+    font-size: 24px;
+    margin-right: 20px;
+    color: #ffffff;
+}
+.contacto-info .left-side p{
+    font-size: 17px;
+    color: #ffffff;
+}
+.contacto-info .right-side{
+    width: 50%;
+}
+.contacto-info .right-side input{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 47px;
+    padding: 15px;
+    border-radius: 9px;
+    transition: 0.3s;
+    border: 1px solid #f1f1f1;
+    color: #212121;
+    font-weight: lighter;
+}
+.contacto-info .right-side:focus,
+.contacto-info .right-side textarea:focus{
+    border-color: #4f9cf9;
+}
+.contacto-info .right-side textarea{
+    border: 1px solid #f1f1f1;
+    color: #212121;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    transition: 0.3s;
+    resize: none;
+}
+.contacto-info .right-side button{
+    border: none;
+}
 @media(max-width: 830px){
     .ul{
         position: fixed;
@@ -325,5 +385,61 @@ nav .close-icon{
         position: absolute;
         top: 46px;
         right: 28px;
+    }
+    .faca-mais .faca-mais-text{
+        margin-top: 10px;
+        padding: 0 20px;
+        order: 1;
+    }
+    .faca-mais .container{
+        flex-direction: column;
+    }
+    .faca-mais .faca-mais-text h3{
+        font-size: 48px;
+    }
+    .faca-mais .faca-mais-text,
+    .faca-mais .faca-mais-img{
+        width: 100%;
+    }
+    .banner ,.banner-text{
+        padding: 0;
+        margin: 80px;
+    }
+    .banner .banner-text h1{
+        font-size: 80px;
+    }
+    .banner .banner-text p{
+        font-size: 15px;
+    }
+    .depoimentos .card-item{
+        width: 100%;
+    }
+    .sobre .container{
+        flex-direction: column-reverse;
+    }
+    .sobre .sobre-img,
+    .sobre .sobre-text{
+        width: 100%;
+    }
+    .sobre .sobre-text{
+        margin-top: 40px;
+    }
+    .contacto .contacto-info{
+        flex-direction: column-reverse;
+    }
+    .contacto-info .right-side,
+    .contacto-info .left-side{
+        width: 100%;
+    }
+    .contacto-info .right-side{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:500px){
+    .banner .banner-text h1{
+        font-size: 50px;
+    }
+    .faca-mais .faca-mais-text h3{
+        font-size: 40px;
     }
 }

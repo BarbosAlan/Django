@@ -4,13 +4,17 @@ from contato.models import Pessoa
 
 # Create your views here.
 
-def cadastro(request):
+def contato(request):
     contexto = {
-        'titulo' : 'Jornada Viagem | Cadastro',
+        'titulo' : 'Whitepace | Contato',
+        'h1':"Whitepace",
+        'p': "Construa a sua marca, cosquite o mundo sem a habilidades de códigos ou designer necessários",
+        'button': "Entrar em contato",
+        'link': "/contato/",
         'pessoas' : Pessoa.objects.all()
     }
     return render(request,
-                  'cadastro/index.html',
+                  'contato/index.html',
                   contexto,)
 
 def gravar(request):
@@ -21,4 +25,4 @@ def gravar(request):
     nova_pessoa.mensagem = request.POST.get('mensagem')
     nova_pessoa.save()
     
-    return cadastro(request)
+    return contato(request)

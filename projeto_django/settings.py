@@ -120,13 +120,13 @@ USE_TZ = True
 
 
 
-STATIC_URL = 'static/'
+STATIC_URL = 'base/static/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'base/static')
+    os.path.join(BASE_DIR, 'base/static/')
 ]
 
 # Default primary key field type
