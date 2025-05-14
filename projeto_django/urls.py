@@ -10,3 +10,8 @@ urlpatterns = [
     path('contato/', include('contato.urls')),
     path('admin/', admin.site.urls),
 ]
+
+#Adicione URLs de autenticação de site Django (para login, logout, gerenciamento de senha)
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
+]
