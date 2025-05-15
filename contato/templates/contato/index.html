@@ -1,10 +1,6 @@
 {% extends "global/base.html" %}
 
-
 {% block main %}
-
-
-
 <main>
     <section class="contacto">
         <div class="container">
@@ -34,18 +30,17 @@
                     </div>
                 </div>
                 <div class="right-side">
-                    <form action="">
-                        <input type="text" placeholder="Nome" required>
-                        <input type="email" placeholder="E-mail" required>
-                        <input type="text" placeholder="Assunto" required>
-                        <textarea cols="30" rows="10" placeholder="Sua Mensagem" required></textarea>
-                        <button class="btn">Enviar Mensagem</button>
+                    <form action="{% url 'gravar' %}" method="POST">
+                        {% csrf_token %}
+                        <input type="text" name="nome" placeholder="Nome" required>
+                        <input type="email" name="email" placeholder="E-mail" required>
+                        <input type="text" name="assunto" placeholder="Assunto" required>
+                        <textarea name="mensagem" cols="30" rows="10" placeholder="Sua Mensagem" required></textarea>
+                        <button class="btn" type="submit">Enviar Mensagem</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 </main>
-
-<script src="js/main.js"></script>
 {% endblock main %}

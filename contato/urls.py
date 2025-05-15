@@ -4,10 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.contato, name='contato'),
-    path('gravar/',views.gravar, name='gravar'),
-]
-
-urlpatterns += [
+    path('gravar/', views.gravar, name='gravar'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
 ]
