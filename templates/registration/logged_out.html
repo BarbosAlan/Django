@@ -1,7 +1,40 @@
 {% extends 'global/base.html' %}
 
-
 {% block main %}
-  <p>Desconectado!</p>
-  <a href="{% url 'login'%}">Clique aqui para fazer login novamente.</a>
+<style>
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+  }
+
+  .message-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<main>
+  <div class="message-box">
+    <p>Desconectado!</p>
+    <a href="{% url 'login'%}">Clique aqui para fazer login novamente.</a>
+  </div>
+</main>
 {% endblock %}

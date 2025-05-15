@@ -1,28 +1,30 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from contato.models import Pessoa
-
-# Create your views here.
 
 def contato(request):
     contexto = {
-        'titulo' : 'Whitepace | Contato',
-        'h1':"Whitepace",
-        'p': "Construa a sua marca, cosquite o mundo sem a habilidades de códigos ou designer necessários",
+        'titulo': 'Whitepace | Contato',
+        'h1': "Whitepace",
+        'p': "Construa a sua marca, conquiste o mundo sem habilidades de códigos ou designer necessários",
         'button': "Entrar em contato",
         'link': "/contato/",
-        'pessoas' : Pessoa.objects.all()
+        'pessoas': Pessoa.objects.all().order_by('-id_pessoa')[:10]  # Mostra apenas os 10 mais recentes
     }
-    return render(request,
-                  'contato/index.html',
-                  contexto,)
+    return render(request, 'contato/index.html', contexto)
 
 def gravar(request):
-    nova_pessoa = Pessoa()
-    nova_pessoa.nome = request.POST.get('nome')
-    nova_pessoa.email = request.POST.get('email')
-    nova_pessoa.assunto = request.POST.get('assunto')
-    nova_pessoa.mensagem = request.POST.get('mensagem')
-    nova_pessoa.save()
+    if request.method == 'POST':
+        try:
+            nova_pessoa = Pessoa(
+                nome=request.POST.get('nome'),
+                email=request.POST.get('email'),
+                assunto=request.POST.get('assunto'),
+                mensagem=request.POST.get('mensagem')
+            )
+            nova_pessoa.save()
+            messages.success(request, 'Mensagem enviada com sucesso!')
+        except Exception as e:
+            messages.error(request, f'Erro ao enviar mensagem: {str(e)}')
     
-    return contato(request)
+    return redirect('contato')  # Redireciona para a página de contato
