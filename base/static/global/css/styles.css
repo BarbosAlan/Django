@@ -443,3 +443,127 @@ nav .close-icon{
         font-size: 40px;
     }
 }
+/* Adicione estas classes ao final do seu arquivo CSS */
+
+/* Estilos para a página de autenticação */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 54px 0;
+    gap: 2rem;
+}
+
+.auth-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-box h2 {
+    margin-bottom: 1.5rem;
+    color: #4f9cf9;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.auth-box label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.auth-box input[type="text"],
+.auth-box input[type="email"],
+.auth-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.auth-box input[type="submit"] {
+    background-color: #4f9cf9;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 1rem;
+}
+
+.auth-box input[type="submit"]:hover {
+    background-color: #3580db;
+}
+
+.auth-links {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.auth-links a {
+    color: #4f9cf9;
+    text-decoration: none;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: #ff3333;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Estilos para mensagens */
+.messages {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: white;
+    animation: fadeIn 0.5s;
+}
+
+.alert-success {
+    background-color: #28a745;
+}
+
+.alert-error {
+    background-color: #dc3545;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 830px) {
+    .auth-container {
+        flex-direction: column;
+        padding: 30px 5%;
+    }
+    
+    .auth-box {
+        max-width: 100%;
+    }
+}

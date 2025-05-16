@@ -2,39 +2,54 @@
 
 {% block main %}
 <style>
-  main {
+  .logout-container {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 80vh;
-    padding: 1rem;
-    font-family: Arial, sans-serif;
+    padding: 54px 0;
   }
 
-  .message-box {
+  .logout-box {
     background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    max-width: 400px;
+    padding: 40px;
+    border-radius: 14px;
+    max-width: 500px;
     width: 100%;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
   }
 
-  a {
-    color: #0066cc;
+  .logout-box p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #0000009c;
+  }
+
+  .logout-box a {
+    color: #4f9cf9;
+    font-weight: 600;
     text-decoration: none;
+    transition: 0.3s;
   }
 
-  a:hover {
+  .logout-box a:hover {
+    color: #3580db;
     text-decoration: underline;
+  }
+
+  @media (max-width: 500px) {
+    .logout-box {
+      padding: 30px 20px;
+    }
   }
 </style>
 
-<main>
-  <div class="message-box">
-    <p>Desconectado!</p>
-    <a href="{% url 'login'%}">Clique aqui para fazer login novamente.</a>
+<div class="logout-container">
+  <div class="logout-box">
+    <h3>Desconectado com sucesso!</h3>
+    <p>Você foi desconectado do sistema.</p>
+    <a href="{% url 'login'%}">Clique aqui para fazer login novamente</a>
   </div>
-</main>
+</div>
 {% endblock %}

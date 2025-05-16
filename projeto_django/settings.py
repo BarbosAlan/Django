@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'sobre',
     'servicos',
     'contato',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -142,3 +143,13 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media_root')
 MEDIA_URL  = '/media/'
+
+# settings.py
+# Configurações de email para desenvolvimento
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.example.com'  # Substitua pelo seu servidor SMTP
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'alanguimabarbosa04@gmail.com'
+EMAIL_HOST_PASSWORD = '0407'
+DEFAULT_FROM_EMAIL = 'webmaster@example.com'
